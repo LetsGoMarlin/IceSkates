@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="IceSkates:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/IceSkates_jar</output-path>
+    <root id="archive" name="IceSkates.jar">
+      <element id="module-output" name="IceSkates" />
+    </root>
+  </artifact>
+</component>
