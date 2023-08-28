@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.util.Vector;
 
 public class IceTouch implements Listener{
     @EventHandler
@@ -13,9 +14,8 @@ public class IceTouch implements Listener{
         Player p = event.getPlayer();
         if (p.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == Material.ICE) {
             if (p.isSneaking()) {
-
+                p.setVelocity(new Vector(p.getLocation().getDirection().multiply(10).getX(), 5.0D, p.getLocation().getDirection().multiply(10).getZ()));
             }
-
         }
     }
 }
