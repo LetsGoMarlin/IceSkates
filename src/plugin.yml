@@ -1,5 +1,5 @@
 name: IceSkates
-main: me.letsgomarlin.main
+main: me.letsgomarlin.Main
 version: 1.0
 author: letsgomarlin
 description: iceskating
