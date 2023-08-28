@@ -6,12 +6,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
-    public void OnEnable (){
+    @Override
+    public void onEnable(){
         PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new IceTouch(), this);
 
     }
-
+    @Override
     public void onDisable (){
 
     }
