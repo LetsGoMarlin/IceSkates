@@ -1,6 +1,8 @@
 package me.letsgomarlin;
 
 import org.bukkit.Material;
+import org.bukkit.Particle;
+import org.bukkit.World;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -15,6 +17,8 @@ public class IceTouch implements Listener{
         if (p.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == Material.ICE) {
             if (p.isSneaking()) {
                 p.setVelocity(new Vector(p.getLocation().getDirection().multiply(0.4).getX(), 0.0D, p.getLocation().getDirection().multiply(0.4).getZ()));
+                World world = p.getWorld();
+                world.spawnParticle(Particle.SNOWBALL, event.getFrom(), 3, 0, 0.5, 0);
             }
         }
     }
